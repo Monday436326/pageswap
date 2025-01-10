@@ -2,6 +2,7 @@ import React from 'react';
 import { Wallet, ArrowLeftRight, CoinsIcon } from 'lucide-react';
 import { cn } from '../utils/cn';
 import Logo from './Logo';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 interface NavbarProps {
   activeTab: string;
@@ -45,8 +46,8 @@ export function Navbar({ activeTab, onTabChange, onConnectWallet, isConnected }:
             </button>
           </div>
         </div>
-
-        <button
+        <ConnectButton />
+        {/* <button
           onClick={onConnectWallet}
           className={cn(
             'flex items-center space-x-2 px-6 py-2 rounded-lg transition-all duration-500 transform hover:scale-105',
@@ -57,7 +58,7 @@ export function Navbar({ activeTab, onTabChange, onConnectWallet, isConnected }:
         >
           <Wallet size={20} className="transition-transform group-hover:scale-110" />
           <span>{isConnected ? 'Connected' : 'Connect Wallet'}</span>
-        </button>
+        </button> */}
       </div>
     </nav>
   );
